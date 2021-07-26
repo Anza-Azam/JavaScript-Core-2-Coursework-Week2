@@ -8,13 +8,13 @@ function todoList (todos) {
 
   todos.forEach(task => {
     const items = document.createElement('li')
-    items.innerHTML = task.todo
+    items.innerText = task.todo
 
     todoList.appendChild(items)
 
     items.addEventListener('click', () => {
       if (items.style.textDecoration === 'line-through')
-        items.style.textDecoration = 'none'
+        items.removeAttribute('style')
       else items.style.textDecoration = 'line-through'
     })
   })

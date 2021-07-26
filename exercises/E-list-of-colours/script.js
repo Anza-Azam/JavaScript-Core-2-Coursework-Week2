@@ -13,7 +13,7 @@ function listOfColours (colours) {
     colors.appendChild(opt)
     opt.innerText = colorName
     colors.addEventListener('click', e => {
-      console.log(e)
+      
       colorN.innerText = `You have selected: ${e.target.value}`
       colorN.style.color = e.target.value
     })

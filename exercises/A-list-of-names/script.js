@@ -1,5 +1,5 @@
 function listOfNames(arrayOfPeople) {
-    let content = document.querySelector("#content");
+    const content = document.querySelector("#content");
 
     arrayOfPeople.forEach((person) => {
 
