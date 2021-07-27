@@ -2,13 +2,16 @@ function readingList (books) {
   const content = document.querySelector('#content')
 
   const bookList = document.createElement('ul')
-  content.appendChild(bookList)
-  bookList.style.display = 'flex'
-  bookList.style.justifyContent = 'space-around'
-  bookList.style.listStyleType = 'none'
-
+  const heading = document.createElement('h1')
+  heading.innerText="Book List"
+  content.append(heading, bookList)
+  heading.style.textAlign='left'
+  bookList.className ="flex"
+  
   books.forEach(book => {
     const pElement = document.createElement('li')
+    pElement.className="list"
+
     bookList.appendChild(pElement)
     const bookTitle = document.createElement('p')
     bookTitle.innerHTML = `${book.title} ---- ${book.author}`
@@ -19,7 +22,7 @@ function readingList (books) {
 
     if (book.title === 'The Design of Everyday Things') {
       bookImage.src =
-        'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1483319609l/13356708._SY475_.jpg'
+        'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1442460745l/840._SY475_.jpg'
     }
 
     if (book.title === 'The Most Human Human') {

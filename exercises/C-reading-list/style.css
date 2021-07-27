@@ -152,6 +152,26 @@ body {
   background: #87ca8a;
 }
 
+.flex
+{
+  Display: flex;
+  align-content:stretch;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  list-style-type:none;
+  align-items:flex-start;
+ 
+  
+}
+.list{
+
+
+width :30%;
+height :50%;
+font-size: 2rem;
+
+}
+
 @media screen and (min-width: 992px) {
   .navbar-brand > img {
     max-height: 80px;
