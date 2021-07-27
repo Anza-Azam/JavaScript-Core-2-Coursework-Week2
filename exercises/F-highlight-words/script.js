@@ -10,7 +10,7 @@ function highlightWords (paragraph, colours) {
     const opt = document.createElement('option')
     opt.innerText = color
     selEl.appendChild(opt)
-    
+  })
     const pSplit = paragraph.split(' ') 
    
     pSplit.forEach(word => {
@@ -33,7 +33,7 @@ function highlightWords (paragraph, colours) {
       
       })
     })
-  })
+  
 }
 
 const paragraph =
