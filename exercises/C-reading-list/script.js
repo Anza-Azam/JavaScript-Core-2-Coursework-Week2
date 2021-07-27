@@ -25,11 +25,11 @@ function readingList (books) {
         'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1442460745l/840._SY475_.jpg'
     }
 
-    if (book.title === 'The Most Human Human') {
+    else if (book.title === 'The Most Human Human') {
       bookImage.src =
         'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1295465264l/8884400.jpg'
     }
-    if (book.title === 'The Pragmatic Programmer') {
+    else  {
       bookImage.src =
         'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1401432508l/4099.jpg'
     }
