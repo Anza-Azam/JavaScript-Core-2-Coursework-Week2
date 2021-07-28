@@ -13,8 +13,7 @@ function listOfNames(arrayOfPeople) {
         names.innerHTML = person.name;
         jobs.innerHTML = person.job;
 
-        content.appendChild(names);
-        content.appendChild(jobs);
+        content.append(names,jobs);
     })
 
 

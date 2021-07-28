@@ -3,14 +3,14 @@ function readingList (books) {
 
   const bookList = document.createElement('ul')
   const heading = document.createElement('h1')
-  heading.innerText="Book List"
+  heading.innerText = 'Book List'
   content.append(heading, bookList)
-  heading.style.textAlign='left'
-  bookList.className ="flex"
-  
+  heading.style.textAlign = 'left'
+  bookList.className = 'flex'
+
   books.forEach(book => {
     const pElement = document.createElement('li')
-    pElement.className="list"
+    pElement.className = 'list'
 
     bookList.appendChild(pElement)
     const bookTitle = document.createElement('p')
@@ -20,19 +20,7 @@ function readingList (books) {
 
     const bookImage = document.createElement('img')
 
-    if (book.title === 'The Design of Everyday Things') {
-      bookImage.src =
-        'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1442460745l/840._SY475_.jpg'
-    }
-
-    else if (book.title === 'The Most Human Human') {
-      bookImage.src =
-        'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1295465264l/8884400.jpg'
-    }
-    else  {
-      bookImage.src =
-        'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1401432508l/4099.jpg'
-    }
+    bookImage.src = book.image
 
     bookImage.alt = book.title
     pElement.appendChild(bookImage)
@@ -49,17 +37,24 @@ const books = [
   {
     title: 'The Design of Everyday Things',
     author: 'Don Norman',
-    alreadyRead: false
+    alreadyRead: false,
+    image:
+      'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1442460745l/840._SY475_.jpg'
   },
   {
     title: 'The Most Human Human',
     author: 'Brian Christian',
-    alreadyRead: true
+    alreadyRead: true,
+    image:
+      'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1295465264l/8884400.jpg'
   },
   {
     title: 'The Pragmatic Programmer',
     author: 'Andrew Hunt',
-    alreadyRead: true
+    alreadyRead: true,
+
+    image:
+      'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1401432508l/4099.jpg'
   }
 ]
 

@@ -8,7 +8,7 @@ function shoppingList (arrayOfItems) {
 
   arrayOfItems.forEach(item => {
     const listItem = document.createElement('li')
-    listItem.innerHTML = item
+    listItem.innerText = item
     list.appendChild(listItem)
   })
 

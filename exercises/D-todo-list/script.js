@@ -12,14 +12,13 @@ function todoList (todos) {
 
     todoList.appendChild(items)
 
-    items.addEventListener('click', () => {
-      if (items.style.textDecoration === 'line-through')
-        items.removeAttribute('style')
-      else items.style.textDecoration = 'line-through'
-    })
+    items.addEventListener('click', isDone)
   })
 }
 
+function isDone (ev) {
+  ev.target.classList.toggle('line-through')
+}
 const todos = [
   { todo: 'wash the dishes' },
   { todo: 'walk the dog' },
