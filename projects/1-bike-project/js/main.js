@@ -2,6 +2,9 @@
 
 //////Blue Button
 const blueBtn = document.getElementById('blueBtn')
+const orangeBtn = document.getElementById('orangeBtn')
+const greenBtn = document.getElementById('greenBtn')
+
 const jumbotron = document.querySelector('.jumbotron')
 blueBtn.addEventListener('click', () => {
   jumbotron.style.backgroundColor = '#588fbd'
@@ -12,10 +15,7 @@ blueBtn.addEventListener('click', () => {
   volunteerBtn.style.backgroundColor = '#000000'
   volunteerBtn.style.color = '#ffffff'
 })
-//////Orange Button
 
-const orangeBtn = document.getElementById('orangeBtn')
-//const jumbotron=document.querySelector('.jumbotron')
 orangeBtn.addEventListener('click', () => {
   jumbotron.style.backgroundColor = '#f0ad4e'
   const donateBikeBtn = document.querySelector('.btn.btn-primary.btn-lrg')
@@ -26,10 +26,7 @@ orangeBtn.addEventListener('click', () => {
   volunteerBtn.style.color = '#ffffff'
 })
 
-/////green Button
 
-const greenBtn = document.getElementById('greenBtn')
-//const jumbotron=document.querySelector('.jumbotron')
 greenBtn.addEventListener('click', () => {
   jumbotron.style.backgroundColor = '#87ca8a'
   const donateBikeBtn = document.querySelector('.btn.btn-primary.btn-lrg')
@@ -44,14 +41,16 @@ greenBtn.addEventListener('click', () => {
 //////form functionality
 
 const submit = document.querySelector('button:last-child')
-//console.log(submit);
-submit.addEventListener('click', e => {
-  e.preventDefault()
-  //	console.log(submit);
 
-  //console.log(e);
+submit.addEventListener('click', validation)
+ 
+
+
+
+function validation(event)
+{event.preventDefault()
   const formFields = document.querySelectorAll('form .form-control')
-  //console.log(formFields);
+ 
   let valid = []
   const array = Array.from(formFields)
   array.forEach((Element, index) => {
@@ -78,8 +77,8 @@ submit.addEventListener('click', e => {
         valid.pop()
         Element.removeAttribute('style')
 
-        //	console.log("length bcaomes", valid.length);
+        
       })
     }
   })
-})
+}
