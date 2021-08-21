@@ -48,12 +48,15 @@ function validation (event) {
     if (Element.value.length <= 0) {
       Element.style.backgroundColor = 'red'
     } else if (Element.value.length > 0 && Element.type !== 'email') {
+      Element.removeAttribute('style')
+
       valid.push(true)
     } else if (
       Element.value.length > 0 &&
       Element.type === 'email' &&
       Element.value.includes('@')
-    ) {
+    ) {Element.removeAttribute('style')
+
       valid.push(true)
     }
 

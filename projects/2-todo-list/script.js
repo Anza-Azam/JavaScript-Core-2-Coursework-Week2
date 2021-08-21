@@ -47,7 +47,7 @@ const deleteB = document.createElement('button')
 deleteB.className = 'button'
 const creates = document.querySelector('.col-auto')
 creates.appendChild(deleteB)
-deleteB.innerText = 'Delete All Tasks'
+deleteB.innerText = 'Delete Tasks'
 
 function addNewTodo (event) {
   let newTask = []
@@ -67,7 +67,7 @@ function addNewTodo (event) {
 
 populateTodoList(todos)
 
-// Advanced challenge: Write a fucntion that checks the todos in the todo list and deletes the completed ones (we can check which ones are completed by seeing if they have the line-through styling applied or not).
+// Advanced challenge: Write a function that checks the todos in the todo list and deletes the completed ones (we can check which ones are completed by seeing if they have the line-through styling applied or not).
 
 deleteB.addEventListener('click', deleteAllCompletedTodos)
 
